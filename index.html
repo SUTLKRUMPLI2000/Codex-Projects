@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ChatGPT és Google Gemini osztrák előfizetések összehasonlítása ár, funkciók és felhasználási cél szerint."
+    />
+    <title>AI előfizetés-összehasonlító Ausztriához</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Fő navigáció">
+        <a class="brand" href="#top" aria-label="AI előfizetés-összehasonlító kezdőlap">
+          <span class="brand-mark">AI</span>
+          <span>Austria Compare</span>
+        </a>
+        <div class="nav-links">
+          <a href="#csomagok">Csomagok</a>
+          <a href="#ajanlo">Ajánló</a>
+          <a href="#forrasok">Források</a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Ausztriai lakossági AI-előfizetések</p>
+          <h1>ChatGPT vagy Google Gemini? Hasonlítsd össze egy helyen.</h1>
+          <p class="lead">
+            Gyors, magyar nyelvű áttekintés az Ausztriában releváns ChatGPT és
+            Google AI / Gemini csomagokról, árakkal, erősségekkel és gyakorlati
+            döntési szempontokkal.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#csomagok">Összehasonlítás megnyitása</a>
+            <a class="button secondary" href="#ajanlo">Melyiket válasszam?</a>
+          </div>
+        </div>
+        <aside class="price-widget" aria-label="Gyors árösszefoglaló">
+          <div>
+            <span>Google AI Pro</span>
+            <strong>€21,99 / hó</strong>
+          </div>
+          <div>
+            <span>Google AI Ultra</span>
+            <strong>€274,99 / hó</strong>
+          </div>
+          <div>
+            <span>ChatGPT Plus</span>
+            <strong>$20 / hó*</strong>
+          </div>
+          <p>*A ChatGPT webes fizetésnél az EGT-ben eurós, lokalizált checkout jelenhet meg.</p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="controls" aria-labelledby="szuro-cim">
+        <div>
+          <p class="eyebrow">Interaktív szűrő</p>
+          <h2 id="szuro-cim">Szűkítsd a csomagokat a havi kereted alapján</h2>
+        </div>
+        <label class="budget-control" for="budget">
+          <span>Maximum havi költség</span>
+          <output id="budget-output" for="budget">€300</output>
+          <input id="budget" type="range" min="0" max="300" value="300" step="5" />
+        </label>
+      </section>
+
+      <section id="csomagok" class="plans-section" aria-labelledby="plans-title">
+        <div class="section-heading">
+          <p class="eyebrow">Csomagok</p>
+          <h2 id="plans-title">Előfizetések egymás mellett</h2>
+          <p>
+            Az árak tájékoztató jellegűek, 2026. május 12-én ellenőrzött hivatalos
+            források alapján. Mobilos App Store / Google Play előfizetésnél eltérő
+            ár és feltétel jelenhet meg.
+          </p>
+        </div>
+
+        <div class="plans-grid" id="plans-grid"></div>
+      </section>
+
+      <section id="ajanlo" class="recommendations" aria-labelledby="ajanlo-title">
+        <div class="section-heading">
+          <p class="eyebrow">Döntési segédlet</p>
+          <h2 id="ajanlo-title">Melyik éri meg neked?</h2>
+        </div>
+        <div class="recommendation-grid">
+          <article>
+            <h3>Mindennapi kérdésekhez</h3>
+            <p>
+              Kezdd az ingyenes csomagokkal. Ha kevés a limit, a Google AI Plus
+              alacsonyabb osztrák havi díjjal ad bővített Gemini-hozzáférést.
+            </p>
+          </article>
+          <article>
+            <h3>Dokumentumokhoz és Google-ökoszisztémához</h3>
+            <p>
+              A Gemini Pro erős választás, ha Gmailben, Docsban, Drive-ban és
+              NotebookLM-ben dolgozol, mert tárhelyet és appintegrációkat is ad.
+            </p>
+          </article>
+          <article>
+            <h3>Kódoláshoz és komplex munkához</h3>
+            <p>
+              ChatGPT Plus vagy Pro akkor praktikus, ha sokat használsz érvelést,
+              képfeltöltést, projektmappákat, egyedi GPT-ket vagy Codex-funkciókat.
+            </p>
+          </article>
+          <article>
+            <h3>Videóhoz és nagy tárhelyhez</h3>
+            <p>
+              Google AI Ultra csak intenzív kreatív munkára éri meg igazán:
+              magas Gemini/Flow limitek, YouTube Premium és 30 TB tárhely jár hozzá.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="comparison-table" aria-labelledby="table-title">
+        <div class="section-heading">
+          <p class="eyebrow">Részletek</p>
+          <h2 id="table-title">Gyors összehasonlító táblázat</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Szempont</th>
+                <th>ChatGPT</th>
+                <th>Google Gemini</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Legjobb általános fizetős belépő</td>
+                <td>ChatGPT Plus</td>
+                <td>Google AI Plus vagy Pro</td>
+              </tr>
+              <tr>
+                <td>Ökoszisztéma</td>
+                <td>ChatGPT app, projektek, GPT-k, Codex</td>
+                <td>Gmail, Docs, Vids, Drive, NotebookLM, Google One</td>
+              </tr>
+              <tr>
+                <td>Tárhely</td>
+                <td>Nincs Google One-szerű tárhelycsomag</td>
+                <td>200 GB / 5 TB / 30 TB csomagtól függően</td>
+              </tr>
+              <tr>
+                <td>Magas használati limit</td>
+                <td>Pro 5× vagy 20× Plus-limit</td>
+                <td>Ultra legmagasabb Gemini- és Flow-limitekkel</td>
+              </tr>
+              <tr>
+                <td>Lemondás</td>
+                <td>Havonta, bármikor módosítható vagy lemondható</td>
+                <td>Google One feltételek szerint, bármikor lemondható</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="forrasok" class="sources" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <p class="eyebrow">Források</p>
+          <h2 id="sources-title">Hivatalos információk</h2>
+        </div>
+        <ul>
+          <li>
+            <a href="https://chatgpt.com/pricing/" target="_blank" rel="noreferrer">
+              ChatGPT pricing
+            </a>
+            – csomagok és funkciók.
+          </li>
+          <li>
+            <a href="https://help.openai.com/en/articles/10421635-multi-currency-billing" target="_blank" rel="noreferrer">
+              OpenAI multi-currency billing
+            </a>
+            – EGT-ben eurós webes fizetés és fizetési módok.
+          </li>
+          <li>
+            <a href="https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans" target="_blank" rel="noreferrer">
+              ChatGPT Pro tiers
+            </a>
+            – Pro $100 és $200 szintek.
+          </li>
+          <li>
+            <a href="https://gemini.google/at/subscriptions/?hl=de" target="_blank" rel="noreferrer">
+              Google AI Pro und Ultra – Österreich
+            </a>
+            – osztrák Gemini / Google AI árak és előnyök.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Nem hivatalos összehasonlító oldal. Vásárlás előtt mindig ellenőrizd az
+        aktuális checkout árat és feltételeket a szolgáltatónál.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
