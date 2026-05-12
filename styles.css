@@ -1,0 +1,437 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --ink: #152033;
+  --muted: #667085;
+  --line: #d9e0ec;
+  --chatgpt: #10a37f;
+  --gemini: #4776e6;
+  --gemini-2: #8e54e9;
+  --accent: #ffb020;
+  --shadow: 0 24px 70px rgba(29, 41, 57, 0.12);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, #e7fff7, transparent 34rem),
+    radial-gradient(circle at top right, #e9e8ff, transparent 30rem), var(--bg);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+.hero {
+  padding: 1.25rem clamp(1rem, 4vw, 4rem) 4rem;
+}
+
+.topbar,
+.hero-grid,
+.controls,
+.plans-section,
+.recommendations,
+.comparison-table,
+.sources,
+footer {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0 3rem;
+}
+
+.brand,
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.9rem;
+  background: linear-gradient(135deg, var(--chatgpt), var(--gemini));
+  color: white;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--gemini);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 780px;
+  margin-bottom: 1rem;
+  font-size: clamp(2.65rem, 7vw, 5.9rem);
+  line-height: 0.94;
+  letter-spacing: -0.07em;
+}
+
+h2 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.lead {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.2rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.primary {
+  background: var(--ink);
+  color: white;
+}
+
+.secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.price-widget,
+.controls,
+.plan-card,
+.recommendation-grid article,
+.table-wrap,
+.sources,
+footer {
+  border: 1px solid rgba(217, 224, 236, 0.85);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.price-widget {
+  display: grid;
+  gap: 1rem;
+  padding: 1.4rem;
+}
+
+.price-widget div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  background: #f8fafc;
+}
+
+.price-widget span,
+.card-meta,
+.budget-control span {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.price-widget strong {
+  white-space: nowrap;
+}
+
+.price-widget p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+main {
+  display: grid;
+  gap: 4rem;
+  padding: 0 clamp(1rem, 4vw, 4rem) 4rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.budget-control {
+  display: grid;
+  min-width: min(410px, 100%);
+  gap: 0.6rem;
+}
+
+#budget-output {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--gemini);
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.25rem;
+  overflow: hidden;
+}
+
+.plan-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 0.45rem;
+  background: var(--card-color, var(--gemini));
+}
+
+.plan-card.hidden {
+  display: none;
+}
+
+.card-provider {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--card-color, var(--gemini)) 13%, white);
+  color: color-mix(in srgb, var(--card-color, var(--gemini)) 75%, black);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.plan-card h3 {
+  margin: 1rem 0 0.3rem;
+  font-size: 1.45rem;
+}
+
+.price {
+  margin: 1rem 0;
+  font-size: 2.2rem;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.price small {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.features {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  display: flex;
+  gap: 0.55rem;
+  color: #344054;
+  line-height: 1.45;
+}
+
+.features li::before {
+  content: "✓";
+  color: var(--card-color, var(--chatgpt));
+  font-weight: 950;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.recommendation-grid article {
+  padding: 1.2rem;
+  box-shadow: none;
+}
+
+.recommendation-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f8fafc;
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sources {
+  padding: 1.4rem;
+}
+
+.sources ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.sources a {
+  color: var(--gemini);
+  font-weight: 850;
+}
+
+footer {
+  padding: 1.2rem;
+  color: var(--muted);
+  text-align: center;
+  box-shadow: none;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .plans-grid,
+  .recommendation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding-bottom: 2.5rem;
+  }
+
+  .plans-grid,
+  .recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-widget div {
+    flex-direction: column;
+  }
+}
